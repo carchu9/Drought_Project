@@ -31,6 +31,10 @@ To clean the data (and reduce the data set size), we removed the null data and r
 ## Data Exploration
 
 ## Model Development
+Model iterations and script to test the model located here: “\ML Modeling”
+
+Saved model is located here: “\Trained_Models”
+
 Within the ML Modeling folder there are six iterations of the model along with a script to test the model. We started with developing the models using the test data because it was a smaller dataset to work with. Later, we switched to running it on the training data. At the end, we ran the final model on the test data and saved it to be run independently of the training code.
 
 We began with the Multilayer Perceptron Classifier (v1) which required us to round the scores (target label) to bin the data. The model kept resulting in errors and instead of troubleshooting, we decided to switch to a regression model because the score column was continuous anyway (this way we wouldn’t have to round the score column). 
@@ -43,8 +47,6 @@ We tried a fourth model, the Random Forest Regressor (v5), to see if it would gi
 
 After reviewing the notes by the dataset’s author on kaggle, we discovered the training model was never meant to be run on the soil data combined with the meteorological data (time series). We also learned that the author went with binning the score data as we had originally attempted to do. With these two pieces of information, we reverted back to a classification model and landed with the Random Forest Classifier (v6). This new model gave us a decent accuracy of 0.7591 in addition to producing feature importance.
 
-Model iterations and script to test the model located here: “\ML Modeling”
-Saved model is located here: “\Trained_Models”
 
 ## Directory Structure and Code Files:
   * Data directory
